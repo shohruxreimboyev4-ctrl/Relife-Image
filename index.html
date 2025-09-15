@@ -1,16 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relife Image</title>
-    <link href="./output.css" rel="stylesheet">
-</head>
-<body>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Relief</title>
+    <link rel="stylesheet" href="./src/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="absolute top-0 left-0 w-full bg-black/50 z-20">
+      <div
+        class="max-w-[1200px] mx-auto flex justify-between items-center px-6 py-4"
+      >
+        <nav>
+          <ul class="flex gap-4 text-white text-sm uppercase font-medium">
+            <li>
+              <a href="#" class="px-2 py-1 hover:text-orange-400">О Компании</a>
+            </li>
+            <li>
+              <a href="#" class="px-2 py-1 hover:text-orange-400">Проекты</a>
+            </li>
+            <li>
+              <a href="#" class="px-2 py-1 hover:text-orange-400"
+                >Уход за садом</a
+              >
+            </li>
+            <li>
+              <a href="#" class="px-2 py-1 hover:text-orange-400">Ландшафт</a>
+            </li>
+            <li>
+              <a href="#" class="px-2 py-1 hover:text-orange-400">Отзывы</a>
+            </li>
+          </ul>
+        </nav>
 
+        <div class="hidden md:flex flex-col items-end text-white text-sm">
+          <span
+            ><i class="fa-solid fa-phone mr-1 text-orange-400"></i> +7 (981)
+            98-50-04</span
+          >
+          <span
+            ><i class="fa-solid fa-location-dot mr-1 text-orange-400"></i>
+            Санкт-Петербург и ЛО</span
+          >
+        </div>
 
+        <button id="menu-btn" class="md:hidden text-white text-2xl">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
 
-    <script src="./main.js"></script>
-</body>
+      <div id="mobile-menu" class="hidden bg-black/90">
+        <ul
+          class="flex flex-col gap-4 text-white text-center py-6 uppercase font-medium"
+        >
+          <li><a href="#" class="hover:text-orange-300">О Компании</a></li>
+          <li><a href="#" class="hover:text-orange-300">Проекты</a></li>
+          <li><a href="#" class="hover:text-orange-300">Уход за садом</a></li>
+          <li><a href="#" class="hover:text-orange-300">Ландшафт</a></li>
+          <li><a href="#" class="hover:text-orange-300">Отзывы</a></li>
+          <li class="pt-4 border-t border-gray-700">
+            <span class="block"
+              ><i class="fa-solid fa-phone mr-1 text-orange-400"></i> +7 (981)
+              98-50-04</span
+            >
+            <span class="block"
+              ><i class="fa-solid fa-location-dot mr-1 text-orange-400"></i>
+              Санкт-Петербург и ЛО</span
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- JS -->
+    <script src="./main.js">
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("mobile-menu");
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
 </html>
